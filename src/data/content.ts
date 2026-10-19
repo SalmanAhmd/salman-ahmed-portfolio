@@ -328,6 +328,8 @@ export type Project = {
   title: string
   subtitle?: string
   kind?: string
+  aiAssisted?: boolean
+  fromScratch?: boolean
   problem?: string
   solution?: string
   stack?: string[]
@@ -345,6 +347,7 @@ export const PROJECTS: Project[] = [
     title: 'Employee Benefit Platform',
     subtitle: 'Large-scale InsurTech platform',
     kind: 'Product · Ongoing',
+    fromScratch: true,
     problem:
       'Insurance organizations each need their own products, branding, permissions and rules, but maintaining separate frontends for every tenant does not scale in cost, quality or speed.',
     solution:
@@ -361,6 +364,7 @@ export const PROJECTS: Project[] = [
     title: 'React Native Applications',
     subtitle: 'Production mobile applications',
     kind: 'Mobile · Production',
+    fromScratch: true,
     problem:
       'Product workflows needed to reach mobile without splitting the team or duplicating business logic across platforms.',
     solution:
@@ -377,6 +381,7 @@ export const PROJECTS: Project[] = [
     title: 'Life OS',
     subtitle: 'Personal operating system',
     kind: 'Personal · Shipped',
+    aiAssisted: true,
     problem:
       'Tasks, events, goals, habits, notes and journaling each live in separate apps, so nothing connects, and the overhead of switching tools eats the time they were meant to save.',
     solution:
@@ -408,6 +413,7 @@ export const PROJECTS: Project[] = [
     title: 'Phunny Tools',
     subtitle: 'Playful web utilities',
     kind: 'Personal · Shipped',
+    aiAssisted: true,
     problem:
       'Everyday utilities promise to make things easier, but often quietly make them worse, and nothing pokes fun at that.',
     solution:
@@ -435,6 +441,7 @@ export const PROJECTS: Project[] = [
     title: 'Salah Mumbai',
     subtitle: 'Personal Android application',
     kind: 'Personal · Shipped',
+    aiAssisted: true,
     problem:
       'A personal need: reliable prayer times for Mumbai, with reminders, goal tracking and a history of one’s own observance, in a calm, focused interface.',
     solution:
@@ -452,6 +459,7 @@ export const PROJECTS: Project[] = [
     title: 'Locking Popping',
     subtitle: 'Retro rhythm battle game',
     kind: 'Personal · Shipped',
+    aiAssisted: true,
     problem:
       'A quick, playful idea: two dancers face off in a battle, decided in the moment rather than across a long session.',
     solution:

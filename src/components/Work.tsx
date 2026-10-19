@@ -123,6 +123,12 @@ function ProjectRow({ project, defaultOpen }: { project: Project; defaultOpen: b
               ) : null}
             </span>
             {project.kind ? <span className="label mt-2 block">{project.kind}</span> : null}
+            {project.aiAssisted ? (
+              <span className="label mt-2 block text-accent-deep">AI-assisted build</span>
+            ) : null}
+            {project.fromScratch ? (
+              <span className="label mt-2 block">Built from scratch</span>
+            ) : null}
             {!open && project.problem ? (
               <span className="mt-3 block max-w-2xl text-[15px] leading-relaxed text-ink-muted sm:hidden">
                 {project.problem}
