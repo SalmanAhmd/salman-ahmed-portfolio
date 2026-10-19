@@ -473,6 +473,19 @@ export const PROJECTS: Project[] = [
     href: 'https://salmanahmd.github.io/locking-popping/',
   },
 
+  {
+    id: 'superbond',
+    index: '07',
+    title: 'Superbond',
+    subtitle: 'Decentralized bond market on Solana',
+    kind: 'Freelance',
+    fromScratch: true,
+    problem: 'Bond markets are opaque and hard to access. Superbond set out to make it possible for consumers to buy, trade and store yield-generating bonds on the Solana network — a decentralized bonds exchange that gives customers access to DeFi marketplaces while ensuring their bonds or non-fungible tokens are properly valued.',
+    solution: 'Designed and implemented the React API layer that connects the frontend to the Solana-based decentralized bond market, letting users interact with yield-generating bonds and NFTs through a web interface.',
+    stack: ['React', 'Solana', 'Web3 API', 'DeFi'],
+    challenge: 'Bridging a traditional React frontend with a decentralized Solana backend: handling wallet integration, on-chain data, and bond/NFT valuation flows in a seamless way.',
+    outcome: 'A functional React interface for buying, trading and storing yield-generating bonds on the Solana network. Not currently live.',
+  },
 ]
 
 /* ------------------------------------------------------------------ */
