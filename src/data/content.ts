@@ -326,14 +326,16 @@ export type Project = {
   id: string
   index: string
   title: string
-  subtitle: string
-  kind: string
-  problem: string
-  solution: string
-  stack: string[]
-  challenge: string
-  outcome: string
+  subtitle?: string
+  kind?: string
+  problem?: string
+  solution?: string
+  stack?: string[]
+  challenge?: string
+  outcome?: string
+  repo?: string
   href?: string
+  demo?: string
 }
 
 export const PROJECTS: Project[] = [
@@ -370,8 +372,66 @@ export const PROJECTS: Project[] = [
       'Employee-facing apps shipped to production on the Apple App Store and Google Play, with a shared mental model across web and mobile that kept the team able to move between surfaces.',
   },
   {
-    id: 'salah',
+    id: 'life-os',
     index: '03',
+    title: 'Life OS',
+    subtitle: 'Personal operating system',
+    kind: 'Personal · Shipped',
+    problem:
+      'Tasks, events, goals, habits, notes and journaling each live in separate apps, so nothing connects — and the overhead of switching tools eats the time they were meant to save.',
+    solution:
+      'A Next.js application that brings tasks, events, goals, habits, notes and journal into a single flow, so the day can be planned, tracked and reflected on in one place.',
+    stack: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'Prisma',
+      'PostgreSQL',
+      'NextAuth',
+      'Radix UI',
+      'React Hook Form',
+      'Zod',
+    ],
+    challenge:
+      'Designing one coherent model for very different content types — a habit is not a note is not a task — and keeping it fast and simple as the data grows.',
+    outcome:
+      'A live system for tracking and managing tasks, events, goals, habits, notes and journal — deployed on Vercel and in daily use.',
+    repo: 'https://github.com/SalmanAhmd/life-os',
+    href: 'https://life-os-salman.vercel.app/',
+    demo: 'https://app.trupeer.ai/view/IwNd2CqUc/life-os-feature-tour',
+  },
+
+  {
+    id: 'phunny-tools',
+    index: '04',
+    title: 'Phunny Tools',
+    subtitle: 'Playful web utilities',
+    kind: 'Personal · Shipped',
+    problem:
+      'Everyday utilities promise to make things easier — but often quietly make them worse, and nothing pokes fun at that.',
+    solution:
+      'A set of playful web tools — from PDF handling to zip files — that work hard at doing absolutely nothing, polished enough to be genuinely fun to share.',
+    stack: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'Framer Motion',
+      'React Router',
+      'JSZip',
+      'PDF.js',
+    ],
+    challenge:
+      'Making the joke land on first use: it has to be fast, obvious and shareable, without becoming a chore to build or maintain.',
+    outcome:
+      'A shipped, shareable web tool that people open for a laugh — and that shows a small product built end to end.',
+    repo: 'https://github.com/SalmanAhmd/phunny-tools',
+    href: 'https://salmanahmd.github.io/phunny-tools/',
+  },
+  {
+    id: 'salah',
+    index: '05',
     title: 'Salah Mumbai',
     subtitle: 'Personal Android application',
     kind: 'Personal · Shipped',
@@ -386,6 +446,25 @@ export const PROJECTS: Project[] = [
       'A shipped, usable personal application — live on the web.',
     href: 'https://salmanahmd.github.io/Salah-Mumbai/',
   },
+  {
+    id: 'locking-popping',
+    index: '06',
+    title: 'Locking Popping',
+    subtitle: 'Retro rhythm battle game',
+    kind: 'Personal · Shipped',
+    problem:
+      'A quick, playful idea: two dancers face off in a battle, decided in the moment rather than across a long session.',
+    solution:
+      'A retro underground locking vs popping rhythm battle game — players pick moves and the outcome is judged on the spot, light enough for a break and replayable enough to share.',
+    stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Vitest'],
+    challenge:
+      'Keeping the battle readable and responsive in the browser: timing, animation and input feel matter far more than any feature list.',
+    outcome:
+      'A shipped, playable browser game with a clear battle loop that runs in any modern browser.',
+    repo: 'https://github.com/SalmanAhmd/locking-popping',
+    href: 'https://salmanahmd.github.io/locking-popping/',
+  },
+
 ]
 
 /* ------------------------------------------------------------------ */
