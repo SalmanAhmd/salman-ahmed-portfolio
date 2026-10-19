@@ -64,8 +64,8 @@ export default function Experience() {
           <div className="lg:col-span-8">
             <Reveal>
               <p className="body-lg max-w-2xl">
-                At FynTune I’ve worked on the same hard problem for years — a benefits platform that
-                keeps growing in tenants, rules and surface area — which means the work naturally
+                At FynTune I’ve worked on the same hard problem for years, a benefits platform that
+                keeps growing in tenants, rules and surface area, which means the work naturally
                 moved from writing features to deciding how features get written.
               </p>
             </Reveal>

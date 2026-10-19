@@ -13,7 +13,7 @@ const PRINCIPLES = [
   },
   {
     title: 'Reuse has to be earned',
-    body: 'Shared components and modules exist to remove real duplication — abstraction that doesn’t pay for itself is just indirection.',
+    body: 'Shared components and modules exist to remove real duplication, abstraction that doesn’t pay for itself is just indirection.',
   },
   {
     title: 'Constraints come first',
@@ -25,7 +25,7 @@ const PRINCIPLES = [
   },
   {
     title: 'Product thinking, not ticket thinking',
-    body: 'The best frontend work happens with backend, product and design in the same conversation — before the implementation, not after it.',
+    body: 'The best frontend work happens with backend, product and design in the same conversation, before the implementation, not after it.',
   },
 ]
 
@@ -52,7 +52,7 @@ export default function Philosophy() {
                 production software.
               </p>
               <p className="body-lg mt-5">
-                I’ve spent most of it on large-scale InsurTech products — building React and React
+                I’ve spent most of it on large-scale InsurTech products, building React and React
                 Native applications, leading frontend development, reviewing architecture and code,
                 and mentoring developers. The work I care about most is the kind that has to keep
                 working as the product, the team and the rules around it all grow.

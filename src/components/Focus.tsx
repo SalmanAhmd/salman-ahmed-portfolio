@@ -10,7 +10,7 @@ export default function Focus() {
           index="08"
           label="What I’m building toward"
           title={<span id="focus-title">From frontend implementation to frontend systems.</span>}
-          intro="A roadmap, not a course checklist — organised by what it adds to the work: depth in the tools, a wider frame around them, and leverage for the team."
+          intro="A roadmap, not a course checklist, organised by what it adds to the work: depth in the tools, a wider frame around them, and leverage for the team."
         />
 
         <div className="relative">

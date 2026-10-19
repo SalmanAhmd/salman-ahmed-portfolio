@@ -34,7 +34,7 @@ export default function Hero() {
 
             <Reveal delay={170}>
               <p className="body-lg mt-7 max-w-xl">
-                I’m <span className="text-ink">Salman Ahmed Ansari</span> — a Senior Lead Frontend Developer
+                I’m <span className="text-ink">Salman Ahmed Ansari</span> a Senior Lead Frontend Developer
                 from Mumbai, focused on React, React Native, JavaScript, and frontend architecture.
               </p>
             </Reveal>

@@ -22,7 +22,7 @@ export default function Blog() {
 
         <Reveal delay={160}>
           <p className="body-lg mt-6 max-w-2xl">
-            Short pieces on the things I keep re-explaining to teams — architecture decisions,
+            Short pieces on the things I keep re-explaining to teams architecture decisions,
             performance trade-offs and lessons from a codebase that got big.
           </p>
         </Reveal>

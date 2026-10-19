@@ -46,7 +46,7 @@ export default function Journey() {
               index="04"
               label="Technical journey"
               title={<span id="journey-title">How the work kept widening.</span>}
-              intro="Not a list of jobs — the sequence of problems that reshaped how I build software."
+              intro="Not a list of jobs, the sequence of problems that reshaped how I build software."
             />
           </div>
         </div>

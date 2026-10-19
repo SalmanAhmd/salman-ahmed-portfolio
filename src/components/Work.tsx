@@ -119,7 +119,7 @@ function ProjectRow({ project, defaultOpen }: { project: Project; defaultOpen: b
                 {project.title}
               </span>
               {project.subtitle ? (
-                <span className="text-[15px] text-ink-muted">— {project.subtitle}</span>
+                <span className="text-[15px] text-ink-muted">- {project.subtitle}</span>
               ) : null}
             </span>
             {project.kind ? <span className="label mt-2 block">{project.kind}</span> : null}
@@ -199,7 +199,7 @@ export default function Work() {
           index="03"
           label="Selected work"
           title={<span id="work-title">Things I have actually built and shipped.</span>}
-          intro="Six pieces of work that represent how I operate — a platform at scale, production mobile applications, and personal products I designed and shipped on my own."
+          intro="Six pieces of work that represent how I operate, a platform at scale, production mobile applications, and personal products I designed and shipped on my own."
         />
 
         <ul className="border-b border-line">

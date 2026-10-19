@@ -69,8 +69,8 @@ export default function CaseStudy() {
 
           <Reveal delay={140}>
             <p className="mt-8 max-w-3xl text-[15px] leading-relaxed text-white/60">
-              One React application serving many insurance organizations — their products, branding,
-              permissions and rules — without forking the codebase. The scale numbers below are only
+              One React application serving many insurance organizations their products, branding,
+              permissions and rules without forking the codebase. The scale numbers below are only
               interesting because of what they force architecturally: every one of them changes how
               you load, split and structure a frontend.
             </p>

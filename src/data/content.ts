@@ -40,14 +40,14 @@ export const CASE_METRICS = [
     suffix: 'M+',
     label: 'users',
     meaning:
-      'Users across the platforms we ship to — a number that makes bundle size, render cost and route weight product concerns, not cosmetic ones.',
+      'Users across the platforms we ship to, a number that makes bundle size, render cost and route weight product concerns, not cosmetic ones.',
   },
   {
     value: 12,
     suffix: '',
     label: 'insurance organizations',
     meaning:
-      'Tenants with different branding, products, permissions and rules — all served by one codebase instead of twelve forks.',
+      'Tenants with different branding, products, permissions and rules, all served by one codebase instead of twelve forks.',
   },
   {
     value: 300,
@@ -61,7 +61,7 @@ export const CASE_METRICS = [
     suffix: '+',
     label: 'routes',
     meaning:
-      'A route graph large enough that naive eager loading stops being viable — routing, splitting and loading strategy become architecture.',
+      'A route graph large enough that naive eager loading stops being viable, routing, splitting and loading strategy become architecture.',
   },
 ] as const
 
@@ -71,7 +71,7 @@ export const CASE_LAYERS = [
     title: 'Tenant',
     meta: 'entry',
     detail:
-      'The request arrives with a tenant identity. Everything downstream — theme, product catalogue, feature flags, navigation — resolves from it, so the shell never hard-codes which organization it is serving.',
+      'The request arrives with a tenant identity. Everything downstream, theme, product catalogue, feature flags, navigation, resolves from it, so the shell never hard-codes which organization it is serving.',
   },
   {
     id: 'shell',
@@ -85,7 +85,7 @@ export const CASE_LAYERS = [
     title: 'Permission Engine',
     meta: 'backend-driven',
     detail:
-      'Permissions are read from the backend rather than guessed in the client. The engine translates them into capabilities the UI can ask about — "can this user see this block?" — so access control has a single source of truth.',
+      'Permissions are read from the backend rather than guessed in the client. The engine translates them into capabilities the UI can ask about "can this user see this block?", so access control has a single source of truth.',
   },
   {
     id: 'features',
@@ -117,7 +117,7 @@ export const CASE_CHALLENGES = [
   },
   {
     title: 'Separating broker and insurer applications',
-    body: 'Defining the architectural boundaries that let broker and insurer applications live in independent repositories — cleaner ownership, independent releases and a path to onboard new insurer partners.',
+    body: 'Defining the architectural boundaries that let broker and insurer applications live in independent repositories, cleaner ownership, independent releases and a path to onboard new insurer partners.',
   },
   {
     title: 'Configuration-driven onboarding',
@@ -137,7 +137,7 @@ export const CASE_CHALLENGES = [
   },
   {
     title: 'Reusable modules & design system',
-    body: '300+ modules built from shared primitives so new workflows are assembled, not rebuilt — and visual consistency survives team growth.',
+    body: '300+ modules built from shared primitives so new workflows are assembled, not rebuilt, and visual consistency survives team growth.',
   },
   {
     title: 'Performance engineering',
@@ -145,11 +145,11 @@ export const CASE_CHALLENGES = [
   },
   {
     title: 'Framework modernization: React 16 → 18',
-    body: 'Led a staged React 16 to React 18 migration with dependency upgrades and React Router modernization — modernizing a large surface without stalling delivery.',
+    body: 'Led a staged React 16 to React 18 migration with dependency upgrades and React Router modernization, modernizing a large surface without stalling delivery.',
   },
   {
     title: 'Build modernization: CRA → Vite',
-    body: 'Migrated the application from Create React App to Vite — reworking configuration, environment handling and build scripts to cut developer feedback loops and modernize the toolchain.',
+    body: 'Migrated the application from Create React App to Vite, reworking configuration, environment handling and build scripts to cut developer feedback loops and modernize the toolchain.',
   },
   {
     title: 'Leading a frontend team of nine',
@@ -174,7 +174,12 @@ export const JOURNEY = [
   {
     year: '',
     title: 'Built the platform foundation',
-    note: 'Delivered 80+ business modules — claims, policy administration, enrollment, wellness and hospital discovery.',
+    note: 'Delivered 80+ business modules, claims, policy administration, enrollment, wellness and hospital discovery.',
+  },
+  {
+    year: '',
+    title: 'Mentored to build Cyber Insurance and build Travel Insurance within three months',
+    note: 'Led a team of three to launch a new insurance line end to end, alongside Cyber and Travel offerings.',
   },
   {
     year: '2021',
@@ -192,11 +197,6 @@ export const JOURNEY = [
     note: 'Led React Native employee apps to the Apple App Store and Google Play.',
   },
   {
-    year: '2022',
-    title: 'Travel Insurance in three months',
-    note: 'Led a team of three to launch a new insurance line end to end — alongside Cyber and Travel offerings.',
-  },
-  {
     year: '2023',
     title: 'Promoted to Senior ReactJS Developer',
     note: 'Took ownership of frontend delivery, technical mentorship and product expansion for enterprise clients.',
@@ -212,19 +212,19 @@ export const JOURNEY = [
     note: 'React 16 → React 18, dependency upgrades and React Router modernization.',
   },
   {
-    year: '2026',
-    title: 'Promoted to Sr. Lead Engineer — Frontend',
-    note: 'Leading 9 React engineers across architecture, engineering standards and delivery execution.',
-  },
-  {
-    year: '',
+    year: '2025',
     title: 'Broker and insurer, separated',
     note: 'Split the two applications into independent repositories along clear architectural boundaries.',
   },
   {
+    year: '2026',
+    title: 'Promoted to Sr. Lead Engineer, Frontend',
+    note: 'Leading 9 React engineers across architecture, engineering standards and delivery execution.',
+  },
+  {
     year: 'Now',
     title: 'Frontend architecture / system engineering',
-    note: 'The direction the work keeps pulling toward — structure, boundaries and contracts at platform scale.',
+    note: 'The direction the work keeps pulling toward, structure, boundaries and contracts at platform scale.',
   },
 ] as const
 
@@ -235,7 +235,7 @@ export const JOURNEY = [
 export const EXPERIENCE_POINTS = [
   'Lead frontend engineering for a multi-tenant InsurTech platform serving 9M+ users across brokers, insurers, employers and employees.',
   'Own frontend architecture, technical strategy, engineering standards and delivery for 300+ business modules and 500+ routes spanning 12 insurance organizations.',
-  'Manage and mentor a team of 9 React engineers — sprint planning, technical design, code quality, release management and engineering practices.',
+  'Manage and mentor a team of 9 React engineers, sprint planning, technical design, code quality, release management and engineering practices.',
   'Spearheaded insurer onboarding by separating broker and insurer applications into independent repositories along defined architectural boundaries.',
   'Led modernization initiatives: CRA → Vite migration, bundle optimization with lazy loading and React Suspense, image optimization, and automated testing adoption.',
   'Evolved the configuration-driven multi-tenant architecture so new brokers and insurers onboard with minimal custom development.',
@@ -243,9 +243,9 @@ export const EXPERIENCE_POINTS = [
   'Delivered 180+ business modules across RFQ and plan management, E-Cashless claim journeys, TPA portals, aviation insurance and flexible enrollment.',
   'As a founding engineer, delivered the first 80+ modules that became the foundation of the platform, plus the first enterprise client onboarding.',
   'Launched employee-facing React Native apps on the App Store and Google Play, and led a team of three to ship the Travel Insurance platform in three months.',
-  'Integrated third-party services — payment gateways, wellness platforms and TPAs — to extend platform capabilities.',
+  'Integrated third-party services, payment gateways, wellness platforms and TPAs, to extend platform capabilities.',
   'Partner closely with product leaders, business stakeholders and enterprise clients (CEOs, CTOs and department heads) to translate complex insurance workflows into configurable solutions.',
-  'Own delivery and stakeholder management for enterprise accounts — requirement analysis, production support and incident resolution.',
+  'Own delivery and stakeholder management for enterprise accounts, requirement analysis, production support and incident resolution.',
   'Contribute to organizational growth through technical interviewing, hiring, mentoring and career development of frontend engineers.',
 ] as const
 
@@ -263,7 +263,7 @@ export const STACK: { group: string; caption: string; items: StackItem[] }[] = [
       { name: 'React', note: 'Primary environment since 2020' },
       { name: 'React Native', note: 'Production mobile applications' },
       { name: 'JavaScript', note: 'Deep, everyday fluency' },
-      { name: 'TypeScript', note: 'Actively strengthening — used in earnest, not claimed as mastery', state: 'learning' },
+      { name: 'TypeScript', note: 'Actively strengthening, used in earnest, not claimed as mastery', state: 'learning' },
       { name: 'Vite', note: 'Adopted through the CRA → Vite migration' },
     ],
   },
@@ -346,12 +346,12 @@ export const PROJECTS: Project[] = [
     subtitle: 'Large-scale InsurTech platform',
     kind: 'Product · Ongoing',
     problem:
-      'Insurance organizations each need their own products, branding, permissions and rules — but maintaining separate frontends for every tenant does not scale in cost, quality or speed.',
+      'Insurance organizations each need their own products, branding, permissions and rules, but maintaining separate frontends for every tenant does not scale in cost, quality or speed.',
     solution:
-      'A multi-tenant React platform: tenant resolved at the shell, permissions read from the backend, business rules consumed as data, and 300+ feature modules composed into 500+ routes — with broker and insurer applications separated into independent repositories as it grew.',
+      'A multi-tenant React platform: tenant resolved at the shell, permissions read from the backend, business rules consumed as data, and 300+ feature modules composed into 500+ routes, with broker and insurer applications separated into independent repositories as it grew.',
     stack: ['React', 'JavaScript', 'Modular architecture', 'React Router', 'Vite', 'Testing'],
     challenge:
-      'Keeping the system understandable as it grew — defining module boundaries, separating broker and insurer concerns, preventing tenant-specific conditionals from leaking everywhere, and holding performance steady across a route graph too large to load eagerly.',
+      'Keeping the system understandable as it grew, defining module boundaries, separating broker and insurer concerns, preventing tenant-specific conditionals from leaking everywhere, and holding performance steady across a route graph too large to load eagerly.',
     outcome:
       'Twelve organizations and 9M+ users served from one platform, now led by a team of nine engineers, with a structure that lets new products and workflows be assembled from existing modules instead of rebuilt.',
   },
@@ -364,7 +364,7 @@ export const PROJECTS: Project[] = [
     problem:
       'Product workflows needed to reach mobile without splitting the team or duplicating business logic across platforms.',
     solution:
-      'React Native applications sharing React conventions, component thinking and API contracts with the web platform — so the same engineering habits apply on both surfaces.',
+      'React Native applications sharing React conventions, component thinking and API contracts with the web platform, so the same engineering habits apply on both surfaces.',
     stack: ['React Native', 'React', 'JavaScript', 'API integration'],
     challenge:
       'Platform differences: navigation, performance characteristics, release cadence and device behaviour all diverge from the web, while the product language must stay consistent.',
@@ -378,7 +378,7 @@ export const PROJECTS: Project[] = [
     subtitle: 'Personal operating system',
     kind: 'Personal · Shipped',
     problem:
-      'Tasks, events, goals, habits, notes and journaling each live in separate apps, so nothing connects — and the overhead of switching tools eats the time they were meant to save.',
+      'Tasks, events, goals, habits, notes and journaling each live in separate apps, so nothing connects, and the overhead of switching tools eats the time they were meant to save.',
     solution:
       'A Next.js application that brings tasks, events, goals, habits, notes and journal into a single flow, so the day can be planned, tracked and reflected on in one place.',
     stack: [
@@ -394,9 +394,9 @@ export const PROJECTS: Project[] = [
       'Zod',
     ],
     challenge:
-      'Designing one coherent model for very different content types — a habit is not a note is not a task — and keeping it fast and simple as the data grows.',
+      'Designing one coherent model for very different content types, a habit is not a note is not a task, and keeping it fast and simple as the data grows.',
     outcome:
-      'A live system for tracking and managing tasks, events, goals, habits, notes and journal — deployed on Vercel and in daily use.',
+      'A live system for tracking and managing tasks, events, goals, habits, notes and journal, deployed on Vercel and in daily use.',
     repo: 'https://github.com/SalmanAhmd/life-os',
     href: 'https://life-os-salman.vercel.app/',
     demo: 'https://app.trupeer.ai/view/IwNd2CqUc/life-os-feature-tour',
@@ -409,9 +409,9 @@ export const PROJECTS: Project[] = [
     subtitle: 'Playful web utilities',
     kind: 'Personal · Shipped',
     problem:
-      'Everyday utilities promise to make things easier — but often quietly make them worse, and nothing pokes fun at that.',
+      'Everyday utilities promise to make things easier, but often quietly make them worse, and nothing pokes fun at that.',
     solution:
-      'A set of playful web tools — from PDF handling to zip files — that work hard at doing absolutely nothing, polished enough to be genuinely fun to share.',
+      'A set of playful web tools, from PDF handling to zip files, that work hard at doing absolutely nothing, polished enough to be genuinely fun to share.',
     stack: [
       'React',
       'TypeScript',
@@ -425,7 +425,7 @@ export const PROJECTS: Project[] = [
     challenge:
       'Making the joke land on first use: it has to be fast, obvious and shareable, without becoming a chore to build or maintain.',
     outcome:
-      'A shipped, shareable web tool that people open for a laugh — and that shows a small product built end to end.',
+      'A shipped, shareable web tool that people open for a laugh, and that shows a small product built end to end.',
     repo: 'https://github.com/SalmanAhmd/phunny-tools',
     href: 'https://salmanahmd.github.io/phunny-tools/',
   },
@@ -436,14 +436,14 @@ export const PROJECTS: Project[] = [
     subtitle: 'Personal Android application',
     kind: 'Personal · Shipped',
     problem:
-      'A personal need: reliable prayer times for Mumbai, with reminders, goal tracking and a history of one’s own observance — in a calm, focused interface.',
+      'A personal need: reliable prayer times for Mumbai, with reminders, goal tracking and a history of one’s own observance, in a calm, focused interface.',
     solution:
       'An Android application covering prayer times, reminders, goals and prayer history, built and published as a personal product.',
     stack: ['Android', 'Mobile UI', 'Local data', 'Notifications'],
     challenge:
       'Designing for daily use: correct timing, dependable reminders and an interface that stays out of the way every single day.',
     outcome:
-      'A shipped, usable personal application — live on the web.',
+      'A shipped, usable personal application, live on the web.',
     href: 'https://salmanahmd.github.io/Salah-Mumbai/',
   },
   {
@@ -455,7 +455,7 @@ export const PROJECTS: Project[] = [
     problem:
       'A quick, playful idea: two dancers face off in a battle, decided in the moment rather than across a long session.',
     solution:
-      'A retro underground locking vs popping rhythm battle game — players pick moves and the outcome is judged on the spot, light enough for a break and replayable enough to share.',
+      'A retro underground locking vs popping rhythm battle game, players pick moves and the outcome is judged on the spot, light enough for a break and replayable enough to share.',
     stack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Vitest'],
     challenge:
       'Keeping the battle readable and responsive in the browser: timing, animation and input feel matter far more than any feature list.',
@@ -477,7 +477,7 @@ export const METHOD = [
   { step: 'Model the system', body: 'Name the entities, boundaries and contracts before components.' },
   { step: 'Design architecture', body: 'Choose where complexity is allowed to live.' },
   { step: 'Build the smallest reliable solution', body: 'Enough to be real, simple enough to change.' },
-  { step: 'Measure', body: 'Observe behaviour in production terms — not assumptions.' },
+  { step: 'Measure', body: 'Observe behaviour in production terms, not assumptions.' },
   { step: 'Optimize', body: 'Only where measurement says it matters.' },
   { step: 'Document', body: 'So the next person does not need me in the room.' },
 ] as const

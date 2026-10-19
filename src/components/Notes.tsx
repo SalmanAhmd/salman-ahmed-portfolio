@@ -11,7 +11,7 @@ export default function Notes() {
           index="09"
           label="Notes"
           title={<span id="notes-title">Writing, when it’s worth writing.</span>}
-          intro="Short pieces on the things I keep re-explaining to teams — architecture decisions, performance trade-offs and lessons from a codebase that got big."
+          intro="Short pieces on the things I keep re-explaining to teams, architecture decisions, performance trade-offs and lessons from a codebase that got big."
         />
 
         <Reveal>

@@ -13,7 +13,7 @@ export default function Method() {
           index="07"
           label="How I think"
           title={<span id="method-title">The same sequence, most problems.</span>}
-          intro="Seniority isn’t a headline — it’s having a repeatable way to move from an unclear problem to a system other people can work in."
+          intro="Seniority isn’t a headline, it’s having a repeatable way to move from an unclear problem to a system other people can work in."
         />
 
         <div ref={ref} className="relative">
