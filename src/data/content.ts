@@ -2,7 +2,7 @@ export const PROFILE = {
   name: 'Salman Ahmed Ansari',
   role: 'Sr. Lead Engineer, Frontend',
   location: 'Mumbai, India',
-  experience: '6+ years building production software',
+  experience: '7+ years building production software',
   email: 'developer.salmanahmed@gmail.com',
   github: 'https://github.com/salmanahmd',
   linkedin: 'https://www.linkedin.com/in/ansari-salman/',

@@ -72,7 +72,7 @@ export default function Philosophy() {
               <dl className="mt-8 grid grid-cols-2 gap-y-5 border-t border-line pt-6">
                 {[
                   ['Based in', PROFILE.location],
-                  ['Experience', '6+ years'],
+                  ['Experience', '7+ years'],
                   ['Focus', 'React · React Native'],
                   ['Domain', 'InsurTech platforms'],
                 ].map(([term, detail]) => (
