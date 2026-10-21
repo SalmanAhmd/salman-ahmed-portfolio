@@ -406,10 +406,29 @@ export const PROJECTS: Project[] = [
     href: 'https://life-os-salman.vercel.app/',
     demo: 'https://app.trupeer.ai/view/IwNd2CqUc/life-os-feature-tour',
   },
+  {
+    id: 'linkcraft',
+    index: '04',
+    title: 'LinkCraft',
+    subtitle: 'QR code generator and URL shortener',
+    kind: 'Personal · Shipped',
+    aiAssisted: true,
+    problem:
+      'Short links and QR codes are usually handled by separate tools, each with its own account, limits and tracking, so managing them becomes fragmented.',
+    solution:
+      'A full-stack monorepo: a React client for generating QR codes and shortening URLs, backed by an Express API with SQLite persistence, with shared tooling, tests and typechecking across both workspaces.',
+    stack: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'SQLite', 'Vitest'],
+    challenge:
+      'Keeping the client and server in one workspace with shared tooling, tests, typechecking and database migrations, and deploying the result reliably.',
+    outcome:
+      'A shipped QR code generator and URL shortener, deployed on Render.',
+    repo: 'https://github.com/SalmanAhmd/qr-code',
+    href: 'https://qr-code-h7dg.onrender.com/',
+  },
 
   {
     id: 'phunny-tools',
-    index: '04',
+    index: '05',
     title: 'Phunny Tools',
     subtitle: 'Playful web utilities',
     kind: 'Personal · Shipped',
@@ -437,7 +456,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'salah',
-    index: '05',
+    index: '06',
     title: 'Salah Mumbai',
     subtitle: 'Personal Android application',
     kind: 'Personal · Shipped',
@@ -455,7 +474,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'locking-popping',
-    index: '06',
+    index: '07',
     title: 'Locking Popping',
     subtitle: 'Retro rhythm battle game',
     kind: 'Personal · Shipped',
@@ -475,7 +494,7 @@ export const PROJECTS: Project[] = [
 
   {
     id: 'superbond',
-    index: '07',
+    index: '08',
     title: 'Superbond',
     subtitle: 'Decentralized bond market on Solana',
     kind: 'Freelance',

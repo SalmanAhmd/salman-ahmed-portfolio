@@ -205,7 +205,7 @@ export default function Work() {
           index="03"
           label="Selected work"
           title={<span id="work-title">Things I have actually built and shipped.</span>}
-          intro="Six pieces of work that represent how I operate, a platform at scale, production mobile applications, and personal products I designed and shipped on my own."
+          intro="Some work that represent how I operate, a platform at scale, production mobile applications, and personal products I designed and shipped on my own."
         />
 
         <ul className="border-b border-line">
