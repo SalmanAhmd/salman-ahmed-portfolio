@@ -324,7 +324,6 @@ export const STACK: { group: string; caption: string; items: StackItem[] }[] = [
 
 export type Project = {
   id: string
-  index: string
   title: string
   subtitle?: string
   kind?: string
@@ -343,7 +342,6 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     id: 'ebp',
-    index: '01',
     title: 'Employee Benefit Platform',
     subtitle: 'Large-scale InsurTech platform',
     kind: 'Product · Ongoing',
@@ -360,7 +358,6 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'rn',
-    index: '02',
     title: 'React Native Applications',
     subtitle: 'Production mobile applications',
     kind: 'Mobile · Production',
@@ -377,7 +374,6 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'life-os',
-    index: '03',
     title: 'Life OS',
     subtitle: 'Personal operating system',
     kind: 'Personal · Shipped',
@@ -408,7 +404,6 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'linkcraft',
-    index: '04',
     title: 'LinkCraft',
     subtitle: 'QR code generator and URL shortener',
     kind: 'Personal · Shipped',
@@ -427,8 +422,25 @@ export const PROJECTS: Project[] = [
   },
 
   {
+    id: 'mac-clipboard',
+    title: 'ClipVault',
+    subtitle: 'Mac clipboard history manager',
+    kind: 'Personal · Desktop application',
+    aiAssisted: true,
+    problem:
+      'Copied text and other clipboard content is easy to lose when a new copy replaces it, making it difficult to retrieve something copied earlier.',
+    solution:
+      'A fast, local-only desktop application that keeps clipboard history available to browse and reuse.',
+    stack: ['Tauri 2', 'React 19', 'TypeScript', 'Vite 8'],
+    challenge:
+      'Building a responsive desktop experience for clipboard history while keeping clipboard data local to the device.',
+    outcome: 'A desktop clipboard history manager focused on fast access and local-only storage.',
+    repo: 'https://github.com/SalmanAhmd/mac-clipboard',
+  },
+
+
+  {
     id: 'phunny-tools',
-    index: '05',
     title: 'Phunny Tools',
     subtitle: 'Playful web utilities',
     kind: 'Personal · Shipped',
@@ -456,7 +468,6 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'salah',
-    index: '06',
     title: 'Salah Mumbai',
     subtitle: 'Personal Android application',
     kind: 'Personal · Shipped',
@@ -474,7 +485,6 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'locking-popping',
-    index: '07',
     title: 'Locking Popping',
     subtitle: 'Retro rhythm battle game',
     kind: 'Personal · Shipped',
@@ -491,10 +501,8 @@ export const PROJECTS: Project[] = [
     repo: 'https://github.com/SalmanAhmd/locking-popping',
     href: 'https://salmanahmd.github.io/locking-popping/',
   },
-
   {
     id: 'superbond',
-    index: '08',
     title: 'Superbond',
     subtitle: 'Decentralized bond market on Solana',
     kind: 'Freelance',

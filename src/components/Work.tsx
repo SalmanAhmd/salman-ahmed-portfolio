@@ -61,7 +61,7 @@ function ProjectLinks({ project }: { project: Project }) {
   )
 }
 
-function ProjectRow({ project, defaultOpen }: { project: Project; defaultOpen: boolean }) {
+function ProjectRow({ project, defaultOpen, index }: { project: Project; defaultOpen: boolean; index: number }) {
   const [open, setOpen] = useState(defaultOpen)
   const contentRef = useRef<HTMLDivElement>(null)
   const innerRef = useRef<HTMLDivElement>(null)
@@ -110,7 +110,7 @@ function ProjectRow({ project, defaultOpen }: { project: Project; defaultOpen: b
           className="grid w-full grid-cols-[auto_1fr_auto] items-start gap-4 py-7 text-left transition-colors duration-300 hover:bg-paper-raised sm:gap-6 sm:py-8"
         >
           <span className="label tabular pt-1.5 text-ink-faint transition-colors group-hover:text-accent-deep">
-            {project.index}
+            {index + 1}
           </span>
 
           <span className="min-w-0">
@@ -138,9 +138,8 @@ function ProjectRow({ project, defaultOpen }: { project: Project; defaultOpen: b
 
           <span
             aria-hidden
-            className={`mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-line-strong transition-all duration-300 ease-out-expo ${
-              open ? 'rotate-45 border-ink bg-ink text-paper' : 'group-hover:border-ink'
-            }`}
+            className={`mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-line-strong transition-all duration-300 ease-out-expo ${open ? 'rotate-45 border-ink bg-ink text-paper' : 'group-hover:border-ink'
+              }`}
           >
             <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden>
               <path d="M6 1v10M1 6h10" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
@@ -210,7 +209,7 @@ export default function Work() {
 
         <ul className="border-b border-line">
           {PROJECTS.map((project, i) => (
-            <ProjectRow key={project.id} project={project} defaultOpen={i === 0} />
+            <ProjectRow key={project.id} project={{ ...project }} index={i} defaultOpen={i === 0} />
           ))}
         </ul>
       </div>
