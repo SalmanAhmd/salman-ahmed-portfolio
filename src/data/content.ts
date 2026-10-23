@@ -337,6 +337,7 @@ export type Project = {
   repo?: string
   href?: string
   demo?: string
+  doc?: string
 }
 
 export const PROJECTS: Project[] = [
@@ -512,6 +513,25 @@ export const PROJECTS: Project[] = [
     stack: ['React', 'Solana', 'Web3 API', 'DeFi'],
     challenge: 'Bridging a traditional React frontend with a decentralized Solana backend: handling wallet integration, on-chain data, and bond/NFT valuation flows in a seamless way.',
     outcome: 'A functional React interface for buying, trading and storing yield-generating bonds on the Solana network. Not currently live.',
+  },
+  {
+    id: 'agricom',
+    title: 'Agricom',
+    subtitle: 'Agriculture marketplace connecting farmers, sellers and consumers',
+    kind: 'Personal · Built from scratch',
+    fromScratch: true,
+    problem:
+      'Farmers in India are not getting a fair price for their products because of contractors sitting between them and buyers. The aim was to bring the whole agriculture industry onto a single platform so farmers, sellers and consumers can trade directly.',
+    solution:
+      'A full-stack marketplace built with React and Redux on the frontend and Node.js with Express on the backend, with PostgreSQL and MongoDB as data stores. It removes the contractor middleman: farmers can buy farming needs from sellers and sell their produce directly to consumers, with chat, Google OAuth login, profiles, cart and checkout, billing, orders with email acknowledgement, and a blog page.',
+    stack: ['React', 'Redux', 'Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'Heroku', 'Cloudinary'],
+    challenge:
+      'Designing role-based experiences for farmers, sellers and consumers, each with their own profiles, inventory and flows, while keeping the marketplace, chat, payments and order acknowledgement consistent across the platform.',
+    outcome:
+      'A working agriculture marketplace prototype connecting farmers, sellers and consumers, with roles, profiles, cart, checkout, orders, chat and a blog page.',
+    repo: 'https://github.com/SalmanAhmd/Salman-Sitanshu-Kissan-Junction-au4',
+    demo: 'https://drive.google.com/file/d/1SRzREnaXyMat04TImXR2F4BvqUiT-MBB/view?usp=sharing',
+    doc: 'https://docs.google.com/document/d/1SH3liTO59viYvGi6V7J5R95MmqyycTOOl1jeo8YNKNY/edit?tab=t.0',
   },
 ]
 

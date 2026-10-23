@@ -57,6 +57,18 @@ function ProjectLinks({ project }: { project: Project }) {
           </span>
         </a>
       ) : null}
+
+      {project.doc ? (
+        <a href={project.doc} target="_blank" rel="noreferrer" className={linkClass}>
+          Read document
+          <span
+            aria-hidden
+            className="transition-transform duration-300 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5"
+          >
+            ↗
+          </span>
+        </a>
+      ) : null}
     </div>
   )
 }
