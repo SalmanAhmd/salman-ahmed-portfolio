@@ -8,7 +8,7 @@ export default function Notes() {
     <section id="notes" className="section border-t border-line" aria-labelledby="notes-title">
       <div className="container-page">
         <SectionHeading
-          index="09"
+          index="10"
           label="Notes"
           title={<span id="notes-title">Writing, when it’s worth writing.</span>}
           intro="Short pieces on the things I keep re-explaining to teams, architecture decisions, performance trade-offs and lessons from a codebase that got big."

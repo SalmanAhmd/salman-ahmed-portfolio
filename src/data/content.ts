@@ -839,3 +839,37 @@ export const POSTS: BlogPost[] = [
     ],
   },
 ];
+
+/* ------------------------------------------------------------------ */
+/* GitHub activity                                                     */
+/* ------------------------------------------------------------------ */
+
+export const GITHUB_SECTION = {
+  index: '06',
+  label: 'Open source activity',
+  title: 'The work shows up daily.',
+  intro:
+    'A live look at public GitHub activity since 2019: the side projects, experiments and small fixes that keep the tools sharp.',
+} as const
+
+export const GITHUB_ACTIVITY = {
+  username: 'SalmanAhmd',
+  profileUrl: 'https://github.com/SalmanAhmd',
+  apiUrl: 'https://github-contributions-api.jogruber.de/v4/SalmanAhmd?y=all',
+  fallbackImage: 'contributions.png',
+  cacheKey: 'github-activity:SalmanAhmd:v1',
+  cacheTtlMs: 12 * 60 * 60 * 1000,
+  requestTimeoutMs: 8000,
+  readoutDefault: 'Hover or tap a square to see the day.',
+  fallbackNote: 'Live feed unavailable, showing the static snapshot.',
+  fallbackTotals: {
+    2019: 274,
+    2020: 2970,
+    2021: 5937,
+    2022: 6394,
+    2023: 5032,
+    2024: 4558,
+    2025: 9211,
+    2026: 2917,
+  } as Record<string, number>,
+} as const

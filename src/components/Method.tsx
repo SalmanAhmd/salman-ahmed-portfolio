@@ -10,7 +10,7 @@ export default function Method() {
     <section className="section border-t border-line" aria-labelledby="method-title">
       <div className="container-page">
         <SectionHeading
-          index="07"
+          index="08"
           label="How I think"
           title={<span id="method-title">The same sequence, most problems.</span>}
           intro="Seniority isn’t a headline, it’s having a repeatable way to move from an unclear problem to a system other people can work in."

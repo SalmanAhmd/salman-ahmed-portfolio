@@ -12,7 +12,7 @@ export default function Stack() {
     <section id="engineering" className="section border-t border-line" aria-labelledby="stack-title">
       <div className="container-page">
         <SectionHeading
-          index="06"
+          index="07"
           label="Engineering stack"
           title={<span id="stack-title">The instruments, honestly labelled.</span>}
           intro="No bars, no percentages. Just the tools I work with daily, and a clear note where something is still becoming a strength rather than one already."

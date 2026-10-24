@@ -4,6 +4,7 @@ import CaseStudy from '../components/CaseStudy'
 import Work from '../components/Work'
 import Journey from '../components/Journey'
 import Experience from '../components/Experience'
+import GitHubActivity from '../components/GitHubActivity'
 import Stack from '../components/Stack'
 import Method from '../components/Method'
 import Focus from '../components/Focus'
@@ -23,6 +24,7 @@ export default function Home() {
       <Work />
       <Journey />
       <Experience />
+      <GitHubActivity />
       <Stack />
       <Method />
       <Focus />

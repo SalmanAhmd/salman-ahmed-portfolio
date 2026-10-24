@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { NAV_LINKS, PROFILE } from '../data/content'
 import { useActiveSection, useScrollProgress } from '../hooks'
 
-const NAV_IDS: string[] = [...NAV_LINKS.map((link) => link.id), 'contact']
+const NAV_IDS: string[] = [...NAV_LINKS.map((link) => link.id), 'github', 'contact']
 
 export default function Nav() {
   const [open, setOpen] = useState(false)

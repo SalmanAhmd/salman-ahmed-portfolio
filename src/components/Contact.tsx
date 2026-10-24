@@ -32,7 +32,7 @@ export default function Contact() {
 
       <div className="container-page relative">
         <Reveal className="section-index">
-          <span className="tabular text-accent">10</span>
+          <span className="tabular text-accent">11</span>
           <span className="text-white/50">Contact</span>
         </Reveal>
 
