@@ -58,7 +58,7 @@ export default function CaseStudy() {
           </Reveal>
 
           <Reveal delay={80}>
-            <p className="label mt-6 text-white/60">FynTune Solutions · InsurTech platform</p>
+            <p className="label mt-6 text-white/60">FynTune Solution Private Limited · InsurTech platform</p>
             <h2 id="case-title" className="headline-xl mt-4 max-w-[14ch]">
               Employee Benefit Platform
             </h2>

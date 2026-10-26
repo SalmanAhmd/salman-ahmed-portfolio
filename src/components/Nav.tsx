@@ -104,6 +104,12 @@ export default function Nav() {
           </ul>
 
           <div className="flex items-center gap-2">
+            <a href={PROFILE.resume} download className="btn-ghost group hidden h-9 px-4 text-[13.5px] sm:inline-flex" target="_blank" rel="noreferrer">
+              Resume
+              <span aria-hidden className="transition-transform duration-300 group-hover:-translate-y-0.5">
+                ↓
+              </span>
+            </a>
             <Link to="/#contact" className="btn-ghost group hidden h-9 px-4 text-[13.5px] sm:inline-flex">
               Let’s talk
               <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-0.5">
@@ -173,6 +179,22 @@ export default function Nav() {
               className={open ? 'animate-menu-in' : ''}
               style={{ animationDelay: `${60 + NAV_LINKS.length * 45}ms` }}
             >
+              <a
+                href={PROFILE.resume}
+                download
+                onClick={() => setOpen(false)}
+                className="flex items-baseline justify-between border-b border-line py-5 text-3xl font-medium tracking-tightest text-accent"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Resume
+                <span aria-hidden>↓</span>
+              </a>
+            </li>
+            <li
+              className={open ? 'animate-menu-in' : ''}
+              style={{ animationDelay: `${60 + (NAV_LINKS.length + 1) * 45}ms` }}
+            >
               <Link
                 to="/#contact"
                 onClick={() => setOpen(false)}
@@ -185,6 +207,9 @@ export default function Nav() {
           </ul>
 
           <div className="flex flex-wrap gap-3">
+            <a href={PROFILE.resume} className="code-chip hover:border-ink" download target="_blank" rel="noreferrer">
+              Resume ↓
+            </a>
             <a href={PROFILE.github} className="code-chip hover:border-ink" target="_blank" rel="noreferrer">
               GitHub ↗
             </a>

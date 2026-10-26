@@ -47,6 +47,12 @@ export default function Hero() {
                     ↓
                   </span>
                 </Magnetic>
+                <a href={PROFILE.resume} download className="btn-ghost group" target="_blank" rel="noreferrer">
+                  Download resume
+                  <span aria-hidden className="transition-transform duration-300 group-hover:-translate-y-0.5">
+                    ↓
+                  </span>
+                </a>
                 <Magnetic to="/#contact" className="btn-ghost group" strength={0.1}>
                   Let’s talk
                   <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-0.5">

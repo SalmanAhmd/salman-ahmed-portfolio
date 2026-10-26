@@ -48,20 +48,20 @@ export default function Philosophy() {
           <div className="lg:col-span-5">
             <Reveal>
               <p className="body-lg text-ink">
-                I'm a frontend engineer based in {PROFILE.location}, with {PROFILE.experience} in
+                I’m a frontend engineer based in {PROFILE.location}, with {PROFILE.experience} in
                 production software.
               </p>
               <p className="body-lg mt-5">
-                Before joining FynTune, I worked as a freelance developer and mentor, taking on
-                projects end to end and helping early-career developers grow. I joined FynTune in
-                2020 and spent my first two years working remotely, then moved to office-based work
-                in January 2023.
+                I joined {PROFILE.company} in 2020 as a founding frontend engineer and helped build a
+                digital employee-benefits and insurance platform from the ground up. Over the years,
+                I’ve worked across product delivery, frontend architecture, mobile engineering, and
+                engineering leadership for enterprise InsurTech products.
               </p>
               <p className="body-lg mt-5">
-                I've spent most of it on large-scale InsurTech products, building React and React
-                Native applications, leading frontend development, reviewing architecture and code,
-                and mentoring developers. The work I care about most is the kind that has to keep
-                working as the product, the team and the rules around it all grow.
+                My focus is on building large-scale, multi-tenant platforms that remain maintainable as
+                team size, product scope, and business rules grow. I care about architecture, product
+                clarity, performance, and creating systems that teams can extend without creating
+                accidental complexity.
               </p>
             </Reveal>
 
@@ -78,7 +78,7 @@ export default function Philosophy() {
               <dl className="mt-8 grid grid-cols-2 gap-y-5 border-t border-line pt-6">
                 {[
                   ['Based in', PROFILE.location],
-                  ['Experience', '7+ years'],
+                  ['Experience', PROFILE.experience],
                   ['Focus', 'React · React Native'],
                   ['Domain', 'InsurTech platforms'],
                 ].map(([term, detail]) => (

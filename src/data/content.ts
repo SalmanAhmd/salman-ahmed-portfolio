@@ -1,13 +1,14 @@
 export const PROFILE = {
   name: 'Salman Ahmed Ansari',
   role: 'Sr. Lead Engineer, Frontend',
-  location: 'Mumbai, India',
-  experience: '7+ years building production software',
+  location: 'Mumbai, Maharashtra, India',
+  experience: '6.5+ years building production software',
   email: 'developer.salmanahmed@gmail.com',
-  github: 'https://github.com/salmanahmd',
-  linkedin: 'https://www.linkedin.com/in/ansari-salman/',
-  company: 'FynTune Solutions',
+  github: 'https://github.com/SalmanAhmd',
+  linkedin: 'https://www.linkedin.com/in/ansari-salman',
+  company: 'FynTune Solution Private Limited',
   since: 'June 2020',
+  resume: '/salman-ahmed-portfolio/SalmanResume.pdf',
 } as const
 
 export const NAV_LINKS = [
