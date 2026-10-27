@@ -9,6 +9,7 @@ import Stack from '../components/Stack'
 import Method from '../components/Method'
 import Focus from '../components/Focus'
 import Notes from '../components/Notes'
+import PlayTeaser from '../components/PlayTeaser'
 import Contact from '../components/Contact'
 import { PROFILE } from '../data/content'
 import { useDocumentTitle } from '../hooks'
@@ -29,6 +30,7 @@ export default function Home() {
       <Method />
       <Focus />
       <Notes />
+      <PlayTeaser />
       <Contact />
     </>
   )

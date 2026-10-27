@@ -135,6 +135,15 @@
   .code-chip {
     @apply rounded-md border border-line bg-paper-sunk px-2 py-1 font-mono text-[11px] text-ink-muted;
   }
+
+  .snake-board {
+    touch-action: none;
+    background-color: #101113;
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 5% 5%;
+  }
 }
 
 @layer utilities {

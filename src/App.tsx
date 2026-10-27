@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
+import Play from './pages/Play'
 import NotFound from './pages/NotFound'
 
 function ScrollManager() {
@@ -43,6 +44,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/play" element={<Play />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
