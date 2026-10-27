@@ -78,7 +78,7 @@ export default function Nav() {
             {PROFILE.name}
           </Link>
 
-          <ul className="hidden items-center gap-1 md:flex">
+          <ul className="hidden items-center gap-1 lg:flex">
             {NAV_LINKS.map((link) => {
               const isActive = active === link.id
               return (
