@@ -11,7 +11,7 @@ npm run deploy     # gh-pages -d dist
 
 - No test suite, no linter, no CI.
 - Deploy is manual: `npm run deploy` builds and pushes `dist/` to the `gh-pages` branch.
-- The site is served at `https://salmanahmd.github.io/salman-ahmed-portfolio/` — the Vite `base` and `package.json` `homepage` are both set to `/salman-ahmed-portfolio/`.
+- The site is served at `https://salman-ahmed.site/` — the custom domain is set via `public/CNAME`, and the Vite `base` and `package.json` `homepage` both point at the root (`/`).
 
 ## Architecture
 

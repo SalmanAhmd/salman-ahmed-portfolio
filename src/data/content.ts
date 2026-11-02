@@ -8,7 +8,7 @@ export const PROFILE = {
   linkedin: 'https://www.linkedin.com/in/ansari-salman',
   company: 'FynTune Solution Private Limited',
   since: 'June 2020',
-  resume: '/salman-ahmed-portfolio/SalmanResume.pdf',
+  resume: '/SalmanResume.pdf',
 } as const
 
 export const NAV_LINKS = [
