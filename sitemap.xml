@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://salmanahmd.github.io/</loc>
+    <loc>https://salman-ahmed.site/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://salmanahmd.github.io/#work</loc>
+    <loc>https://salman-ahmed.site/#work</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://salmanahmd.github.io/#engineering</loc>
+    <loc>https://salman-ahmed.site/#engineering</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://salmanahmd.github.io/#experience</loc>
+    <loc>https://salman-ahmed.site/#experience</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://salmanahmd.github.io/#notes</loc>
+    <loc>https://salman-ahmed.site/#notes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://salmanahmd.github.io/#about</loc>
+    <loc>https://salman-ahmed.site/#about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
