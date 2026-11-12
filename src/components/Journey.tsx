@@ -72,12 +72,8 @@ export default function Journey() {
                 />
                 <div className="border-b border-line py-5 transition-colors duration-300 group-hover:border-line-strong">
                   <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-                    {item.year ? (
+                    {item.year && (
                       <span className="label tabular text-accent-deep">{item.year}</span>
-                    ) : (
-                      <span className="label tabular" aria-hidden>
-                        &nbsp;
-                      </span>
                     )}
                     <h3 className="text-[17px] font-medium tracking-tight sm:text-lg">
                       {item.title}
