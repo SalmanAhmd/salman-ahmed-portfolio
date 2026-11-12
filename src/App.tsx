@@ -39,7 +39,7 @@ export default function App() {
     <>
       <ScrollManager />
       <Nav />
-      <main id="main" tabIndex={-1} className="outline-none">
+      <main id="main" tabIndex={-1} className="outline-hidden">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />

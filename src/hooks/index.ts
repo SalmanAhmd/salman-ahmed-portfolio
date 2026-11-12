@@ -16,7 +16,7 @@ export function usePrefersReducedMotion(): boolean {
 
 export function useInView<T extends HTMLElement>(
   options: IntersectionObserverInit = {},
-): [RefObject<T>, boolean] {
+): [RefObject<T | null>, boolean] {
   const ref = useRef<T>(null)
   const [inView, setInView] = useState(false)
 
@@ -41,7 +41,7 @@ export function useInView<T extends HTMLElement>(
 
 /** Normalized pointer position (-1..1) within an element, for subtle parallax. */
 export function usePointer<T extends HTMLElement>(): [
-  RefObject<T>,
+  RefObject<T | null>,
   { x: number; y: number },
 ] {
   const ref = useRef<T>(null)

@@ -1,6 +1,106 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #111110;
+  --color-ink-soft: #1a1a18;
+  --color-ink-muted: #55554f;
+  --color-ink-faint: #6f6f67;
+
+  --color-paper: #f7f7f4;
+  --color-paper-raised: #ffffff;
+  --color-paper-sunk: #efefea;
+
+  --color-line: #e3e3dc;
+  --color-line-strong: #cfcfc6;
+  --color-line-dark: #26262a;
+
+  --color-panel: #0b0b0d;
+  --color-panel-raised: #131316;
+
+  --color-accent: #d4541e;
+  --color-accent-soft: #e8703c;
+  --color-accent-deep: #a63c12;
+  --color-accent-tint: #fbede6;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+  --font-serif: 'Instrument Serif', ui-serif, Georgia, serif;
+
+  --tracking-tightest: -0.045em;
+  --tracking-label: 0.14em;
+
+  --breakpoint-xs: 460px;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in: fade-in 0.8s ease both;
+  --animate-line-flow: line-flow 2.4s linear infinite;
+  --animate-pulse-dot: pulse-dot 2.6s ease-in-out infinite;
+  --animate-menu-in: menu-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-scan: scan 5s linear infinite;
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes line-flow {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: -64;
+    }
+  }
+
+  @keyframes pulse-dot {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.45;
+      transform: scale(0.82);
+    }
+  }
+
+  @keyframes menu-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scan {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(400%);
+    }
+  }
+}
 
 @layer base {
   :root {
@@ -41,6 +141,11 @@
     text-wrap: pretty;
   }
 
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+
   :focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
@@ -79,7 +184,7 @@
   }
 
   .section-index {
-    @apply label mb-5 flex items-center gap-3 text-ink-faint;
+    @apply mb-5 flex items-center gap-3 font-mono text-[11px] uppercase tracking-label text-ink-faint;
   }
 
   .section-index::after {
@@ -108,11 +213,11 @@
   }
 
   .btn-solid {
-    @apply btn bg-ink text-paper hover:bg-ink-soft;
+    @apply relative inline-flex h-11 select-none items-center justify-center gap-2 rounded-full bg-ink px-6 text-sm font-medium text-paper transition-all duration-300 ease-out-expo hover:bg-ink-soft;
   }
 
   .btn-ghost {
-    @apply btn border border-line-strong bg-transparent text-ink hover:border-ink hover:bg-ink/[0.04];
+    @apply relative inline-flex h-11 select-none items-center justify-center gap-2 rounded-full border border-line-strong bg-transparent px-6 text-sm font-medium text-ink transition-all duration-300 ease-out-expo hover:border-ink hover:bg-ink/[0.04];
   }
 
   .link-underline {

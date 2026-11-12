@@ -23,6 +23,7 @@ All site content (bio, journey, experience, projects, blog posts, stack) lives i
 
 ## Conventions
 
-- Tailwind design tokens: `ink`, `paper`, `line`, `panel`, `accent` color families (see `tailwind.config.js`). Use these, not arbitrary hex values.
+- Tailwind design tokens: `ink`, `paper`, `line`, `panel`, `accent` color families (see the `@theme` block in `src/index.css`). Use these, not arbitrary hex values.
+- Styling is Tailwind CSS v4 via `@tailwindcss/vite`. There is no `tailwind.config.js` or PostCSS config — theme tokens, keyframes and animations are defined in the `@theme` block of `src/index.css`.
 - Typography: Inter (sans), Instrument Serif (serif), JetBrains Mono (mono) — loaded in `index.html`.
 - Reveal animations: wrap sections in `<Reveal>` from `./components/Reveal`.

@@ -403,7 +403,7 @@ export default function GitHubActivity() {
 
             {status === 'loading' ? (
               <div className="mt-8 animate-pulse" aria-hidden>
-                <div className="mb-2 h-3.5 w-40 rounded bg-white/[0.07]" />
+                <div className="mb-2 h-3.5 w-40 rounded-sm bg-white/[0.07]" />
                 <div className="flex gap-2.5 overflow-hidden">
                   <div className="mt-0.5 w-6" />
                   <div

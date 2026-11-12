@@ -227,7 +227,7 @@ export default function SnakeGame() {
             onClick={() => boardRef.current?.focus()}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
-            className="snake-board relative grid aspect-square overflow-hidden rounded-md border border-white/10 outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#101113]"
+            className="snake-board relative grid aspect-square overflow-hidden rounded-md border border-white/10 outline-hidden focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#101113]"
             style={{ gridTemplateColumns: `repeat(${BOARD_SIZE}, minmax(0, 1fr))` }}
           >
             {Array.from({ length: BOARD_SIZE * BOARD_SIZE }, (_, index) => {
