@@ -160,6 +160,18 @@ export const CASE_CHALLENGES = [
     title: 'Testing & engineering practice',
     body: 'Automated testing introduced where it protects critical workflows, paired with code review discipline and CI checks so refactors on a large codebase stay safe.',
   },
+  {
+    title: 'Codebase hygiene: dead code and duplication at scale',
+    body: 'A repo-wide audit with jscpd (duplication), unimported (unreferenced files) and knip (unused exports, files and dependencies), run with OpenCode, removed ~513 files and 83.6k lines. Unused code is a tax on reading, review and build output, not just bytes.',
+  },
+  {
+    title: 'React Hook Form v5 → v7 behind a wrapper',
+    body: 'Hundreds of forms shared one form layer, so the upgrade landed behind an internal adapter: the wrapper absorbs v7 API differences and forms migrate through a single seam instead of a rewrite of every call site.',
+  },
+  {
+    title: 'Build performance: Vite 6 → 8',
+    body: 'Upgrading Vite to the current major brought production builds to roughly 10 seconds, and combined with dead-code removal cut initial build output from 16MB to 6MB.',
+  },
 ] as const
 
 /* ------------------------------------------------------------------ */
@@ -223,6 +235,16 @@ export const JOURNEY = [
     note: 'Leading 9 React engineers across architecture, engineering standards and delivery execution.',
   },
   {
+    year: '',
+    title: 'Codebase cleanup at scale',
+    note: 'Audited the platform with jscpd, unimported and knip, assisted by OpenCode, removing ~513 files and 83.6k lines of unused code, duplication and dead exports.',
+  },
+  {
+    year: '',
+    title: 'Faster builds, smaller output',
+    note: 'Moved React Hook Form from v5 to v7 behind an adapter wrapper, upgraded Vite 6 to 8, and cut initial build output from 16MB to 6MB at roughly 10 second builds.',
+  },
+  {
     year: 'Now',
     title: 'Frontend architecture / system engineering',
     note: 'The direction the work keeps pulling toward, structure, boundaries and contracts at platform scale.',
@@ -239,6 +261,9 @@ export const EXPERIENCE_POINTS = [
   'Manage and mentor a team of 9 React engineers, sprint planning, technical design, code quality, release management and engineering practices.',
   'Spearheaded insurer onboarding by separating broker and insurer applications into independent repositories along defined architectural boundaries.',
   'Led modernization initiatives: CRA → Vite migration, bundle optimization with lazy loading and React Suspense, image optimization, and automated testing adoption.',
+  'Ran a repo-wide dead-code, duplication and dependency audit with jscpd, unimported and knip (OpenCode-assisted), removing ~513 files and 83.6k lines of unused code.',
+  'Migrated React Hook Form from v5 to v7 behind an adapter wrapper, upgrading forms through a single seam instead of rewriting every call site.',
+  'Upgraded Vite 6 → 8, reducing production build time to roughly 10 seconds and initial build output from 16MB to 6MB.',
   'Evolved the configuration-driven multi-tenant architecture so new brokers and insurers onboard with minimal custom development.',
   'Drove a React 16 → React 18 migration, dependency upgrades and React Router modernization across a large surface.',
   'Delivered 180+ business modules across RFQ and plan management, E-Cashless claim journeys, TPA portals, aviation insurance and flexible enrollment.',
@@ -265,7 +290,7 @@ export const STACK: { group: string; caption: string; items: StackItem[] }[] = [
       { name: 'React Native', note: 'Production mobile applications' },
       { name: 'JavaScript', note: 'Deep, everyday fluency' },
       { name: 'TypeScript', note: 'Actively strengthening, used in earnest, not claimed as mastery', state: 'learning' },
-      { name: 'Vite', note: 'Adopted through the CRA → Vite migration' },
+      { name: 'Vite', note: 'CRA → Vite migration, then Vite 8' },
     ],
   },
   {
@@ -304,6 +329,7 @@ export const STACK: { group: string; caption: string; items: StackItem[] }[] = [
       { name: 'Bootstrap' },
       { name: 'Responsive Design' },
       { name: 'Accessibility' },
+      { name: 'React Hook Form', note: 'v5 → v7 behind an adapter' },
     ],
   },
   {
@@ -315,6 +341,9 @@ export const STACK: { group: string; caption: string; items: StackItem[] }[] = [
       { name: 'Code Review' },
       { name: 'CI/CD' },
       { name: 'API Integration' },
+      { name: 'Dead-code analysis', note: 'jscpd · unimported · knip' },
+      { name: 'Build tooling', note: 'Vite 8, ~10s builds' },
+      { name: 'AI-assisted engineering', note: 'OpenCode for audits and migrations' },
     ],
   },
 ]
@@ -594,6 +623,8 @@ export const NOTE_TOPICS = [
   'Engineering leadership',
   'AI-assisted development',
   'Lessons from large frontend systems',
+  'Code quality',
+  'Build tooling',
 ] as const
 
 /* ------------------------------------------------------------------ */
@@ -619,6 +650,43 @@ export function formatPostDate(iso: string): string {
 }
 
 export const POSTS: BlogPost[] = [
+  {
+    slug: 'deleting-513-files-safely',
+    title: 'Deleting 513 files: what a dead-code audit actually teaches you',
+    summary:
+      'A repo-wide cleanup with jscpd, unimported and knip removed 83.6k lines from a six-year-old platform. The tools produced candidates; judgement decided what was safe to delete.',
+    date: '2026-11-12',
+    readingTime: '6 min read',
+    tags: ['Code Quality', 'Tooling', 'Build Performance'],
+    body: [
+      'On a platform that has been shipping for six years, unused code does not announce itself. It accumulates quietly: an export nobody imports, a helper left behind by a refactor, a component superseded by a newer one, a dependency added for a feature that later changed shape. None of it breaks the build, which is precisely why it stays.',
+      'I ran a cleanup pass on the FynTune platform with three tools that answer three different questions. jscpd looks for duplication, the same logic written more than once. unimported looks for files nothing reaches. knip looks for exports, files and dependencies that exist but are never used. Together they turn "the codebase feels heavy" into a list of specific candidates.',
+      'The important word is candidates. Static analysis reads syntax, not intent. A file with no importers may still be reached through a dynamic import, a route registry, or a string that resolves at runtime. An export may exist only for a tenant-specific entry point or a permission map. A dependency may be required by a tool rather than by application code.',
+      'So the output has to be read, not applied. I grouped findings by confidence: clearly dead, deleted immediately; probably dead, verified against routes and dynamic imports and then deleted; and unclear, kept and documented. Anything touching notification flows, permission rendering or tenant configuration got checked by hand, because that is where a false positive becomes a production incident instead of a smaller diff.',
+      'The safety net was deliberately boring: typecheck, a production build, and a walk through the main user journeys after each batch. Small batches mattered more than any single check, because a failure points to a cause when thirty files changed rather than five hundred.',
+      'The result was roughly 513 files and 83.6k lines removed. The number is satisfying, but the more useful change is what the repository looks like afterwards: fewer places a reader has to rule out, fewer near-duplicate implementations of the same rule, and less code for reviewers to hold in their heads.',
+      'The cleanup also made the next round of modernization tractable. The form layer moved from React Hook Form v5 to v7 behind an internal adapter, so hundreds of forms upgraded through one seam instead of a rewrite of every call site. With the dead code gone, upgrading Vite from 6 to 8 brought production builds to roughly ten seconds while initial build output fell from 16MB to 6MB.',
+      'What I would do differently is schedule it. A cleanup that runs as an occasional heroic sprint is expensive and easy to postpone; one that runs as a recurring piece of engineering work stays cheap. Dead code is not a cosmetic problem. It is a standing cost on every change, and it is worth paying down deliberately.',
+    ],
+  },
+  {
+    slug: 'migrating-react-hook-form-behind-a-wrapper',
+    title: 'Migrating React Hook Form without rewriting every form',
+    summary:
+      'Hundreds of forms shared one form layer. Upgrading from v5 to v7 behind an adapter meant the API change landed in a single place instead of at every call site.',
+    date: '2026-10-18',
+    readingTime: '4 min read',
+    tags: ['React', 'React Hook Form', 'Migration'],
+    body: [
+      'Library upgrades are usually described as version bumps. In a large application they are closer to contract changes: the APIs your components depend on may stay conceptually the same while behaving differently at the edges.',
+      'React Hook Form v5 to v7 is a good example. Registration, controller usage, resolver wiring and error handling all shift enough that a per-file migration becomes a long, repetitive diff with many small opportunities to get something subtly wrong.',
+      'The application had hundreds of forms, many written in the same internal style. So instead of upgrading call sites, I upgraded the seam between them: an internal form wrapper that exposes the API our components already use and translates it to the library underneath.',
+      'That wrapper did two jobs. It kept the migration to one file of translation logic, and it gave the forms a stable contract that no longer depended on which version of the library was installed. Call sites stayed untouched, and the upgrade could ship incrementally, screen by screen where needed.',
+      'The trade-off is real. A wrapper is another layer to understand, it can hide library behaviour that some forms legitimately need, and it has to be maintained. It earns its place when many call sites share one pattern; it is overkill for a handful of forms where a direct upgrade is clearer.',
+      'The wrapper should also be treated as temporary scaffolding, with an exit path. As forms are revisited, they can adopt the v7 API directly, and the adapter shrinks until it can be deleted. An adapter with no removal plan quietly becomes permanent architecture.',
+      'The lesson generalises beyond one library. When an upgrade would otherwise touch hundreds of files with the same mechanical change, the interesting question is not how to do it faster, but where the change can be absorbed once.',
+    ],
+  },
   {
     slug: 'leading-a-team-of-nine',
     title: 'What leading a frontend team actually changes',
